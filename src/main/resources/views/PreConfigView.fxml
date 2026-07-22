@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField id="fx:id=&quot;txtAlias&quot;" />
+      <TextField id="fx:id=&quot;txtNombre&quot;" />
+      <Button id="fx:id=&quot;btnRegistrar&quot;" mnemonicParsing="false" text="Button" />
+      <VBox prefHeight="200.0" prefWidth="100.0" />
+      <TextField id="fx:id=&quot;txtTitulo&quot;" />
+      <TextField id="fx:id=&quot;txtArtista&quot;" />
+      <TextField id="fx:id=&quot;txtDuracion&quot;" />
+      <ComboBox id="fx:id=&quot;cmbTipo&quot;" prefWidth="150.0" />
+      <Button id="fx:id=&quot;btnAgregarAudio&quot;" mnemonicParsing="false" text="Button" />
+      <ListView id="fx:id=&quot;listCatalogo&quot;" prefHeight="200.0" prefWidth="200.0" />
+      <VBox prefHeight="200.0" prefWidth="100.0" />
+      <Button id="fx:id=&quot;btnContinuarApp&quot;" mnemonicParsing="false" text="Button" />
+      <Button id="fx:id=&quot;btnSalir&quot;" mnemonicParsing="false" text="Button" />
+   </children>
+</VBox>

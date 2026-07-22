@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField id="fx:id=&quot;txtLoginAlias&quot;" />
+      <Button id="fx:id=&quot;btnLogin&quot;" mnemonicParsing="false" text="Button" />
+      <VBox prefHeight="200.0" prefWidth="100.0" />
+      <ListView id="fx:id=&quot;listPlaylists&quot;" prefHeight="200.0" prefWidth="200.0" />
+      <TextField id="fx:id=&quot;txtNombrePlaylist&quot;" />
+      <Button id="fx:id=&quot;btnCrearPlaylist&quot;" mnemonicParsing="false" text="Button" />
+      <ListView id="fx:id=&quot;listCatalogoDisponible&quot;" prefHeight="200.0" prefWidth="200.0" />
+      <Button id="fx:id=&quot;btnAgregarAPlaylist&quot;" mnemonicParsing="false" text="Button" />
+      <VBox prefHeight="200.0" prefWidth="100.0" />
+      <Button id="fx:id=&quot;btnGuardarYSalir&quot;" mnemonicParsing="false" text="Button" />
+   </children>
+</VBox>
