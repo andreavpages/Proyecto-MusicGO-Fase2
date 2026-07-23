@@ -5,13 +5,17 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+<VBox alignment="CENTER" spacing="25.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="musicgo.controllers.BienvenidaViewController">
     <padding>
-        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
+        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0"/>
     </padding>
 
-    <Label text="Bienvenido a MusicGo" style="-fx-font-size: 20px;"/>
-    <Button text="Continuar" onAction="#onContinuar"/>
-    <Button text="Cerrar aplicación" onAction="#onCerrar"/>
+    <Label text="🎵 MusicGo" styleClass="titulo-app"/>
+    <Label text="Tu plataforma de música y podcasts" styleClass="label"/>
+
+    <VBox spacing="12.0" alignment="CENTER">
+        <Button text="Continuar" onAction="#onContinuar" maxWidth="Infinity"/>
+        <Button text="Cerrar aplicación" onAction="#onCerrar" styleClass="button-secundario" maxWidth="Infinity"/>
+    </VBox>
 </VBox>

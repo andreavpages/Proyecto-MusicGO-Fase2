@@ -1,44 +1,52 @@
 {
   "listaAudios": [
     {
+      "artista": "Los Rumberos",
+      "album": "Tardes de Sol",
       "id": "a1111111-1111-1111-1111-111111111111",
       "titulo": "Ojos Verdes",
       "clasificacionContenido": "Apto para todo público",
-      "duracionSegundos": 210,
-      "artista": "Los Rumberos",
-      "album": "Tardes de Sol"
+      "duracionSegundos": 210
     },
     {
+      "artista": "Camila Ríos",
+      "album": "Confesiones",
       "id": "a2222222-2222-2222-2222-222222222222",
       "titulo": "Noches sin Ti",
       "clasificacionContenido": "Explícito",
-      "duracionSegundos": 245,
-      "artista": "Camila Ríos",
-      "album": "Confesiones"
+      "duracionSegundos": 245
     },
     {
+      "artista": "DJ Fénix",
+      "album": "Calle 21",
       "id": "a3333333-3333-3333-3333-333333333333",
       "titulo": "Ritmo Urbano",
       "clasificacionContenido": "Apto para todo público",
-      "duracionSegundos": 198,
-      "artista": "DJ Fénix",
-      "album": "Calle 21"
+      "duracionSegundos": 198
     },
     {
+      "anfitrion": "Carlos Medina",
+      "descripcion": "Conversación sobre inteligencia artificial y su impacto en Latinoamérica.",
       "id": "b1111111-1111-1111-1111-111111111111",
       "titulo": "Tecnología y Sociedad Ep. 12",
       "clasificacionContenido": "Apto para todo público",
-      "duracionSegundos": 1800,
-      "anfitrion": "Carlos Medina",
-      "descripcion": "Conversación sobre inteligencia artificial y su impacto en Latinoamérica."
+      "duracionSegundos": 1800
     },
     {
+      "anfitrion": "Laura Gómez",
+      "descripcion": "Relatos de misterio narrados en primera persona.",
       "id": "b2222222-2222-2222-2222-222222222222",
       "titulo": "Historias de Medianoche Ep. 5",
       "clasificacionContenido": "Explícito",
-      "duracionSegundos": 2400,
-      "anfitrion": "Laura Gómez",
-      "descripcion": "Relatos de misterio narrados en primera persona."
+      "duracionSegundos": 2400
+    },
+    {
+      "artista": "Yatra",
+      "album": "Musica",
+      "id": "95fe57fe-c70f-491d-8ece-b52259bbefdc",
+      "titulo": "Ojos Marrones",
+      "clasificacionContenido": "Apto para todo publico",
+      "duracionSegundos": 400
     }
   ]
 }

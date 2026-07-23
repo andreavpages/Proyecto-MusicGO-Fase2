@@ -8,30 +8,36 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox spacing="15.0" xmlns:fx="http://javafx.com/fxml"
+<VBox spacing="18.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="musicgo.controllers.SesionPlaylistViewController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="24.0" left="24.0" right="24.0" top="24.0"/>
     </padding>
 
-    <Label text="Sesión y Playlists" style="-fx-font-size: 18px;"/>
+    <Label text="Sesión y Playlists" styleClass="titulo-app"/>
 
-    <HBox spacing="10.0">
-        <TextField fx:id="aliasLoginField" promptText="Alias"/>
+    <HBox spacing="10.0" alignment="CENTER_LEFT" styleClass="card">
+        <TextField fx:id="aliasLoginField" promptText="Alias" HBox.hgrow="ALWAYS"/>
         <Button text="Iniciar sesión" onAction="#onIniciarSesion"/>
-        <Label fx:id="usuarioActivoLabel" text="(sin sesión)"/>
+        <Label fx:id="usuarioActivoLabel" text="(sin sesión)" styleClass="estado-sesion"/>
     </HBox>
 
-    <Label text="Tus playlists"/>
-    <ListView fx:id="playlistsListView" prefHeight="120.0"/>
-    <HBox spacing="10.0">
-        <TextField fx:id="nombrePlaylistField" promptText="Nombre de la nueva playlist"/>
-        <Button text="Crear playlist" onAction="#onCrearPlaylist"/>
+    <HBox spacing="18.0" VBox.vgrow="ALWAYS">
+        <VBox spacing="10.0" styleClass="card" HBox.hgrow="ALWAYS">
+            <Label text="Tus playlists" styleClass="titulo-seccion"/>
+            <ListView fx:id="playlistsListView" prefHeight="220.0" VBox.vgrow="ALWAYS"/>
+            <HBox spacing="10.0">
+                <TextField fx:id="nombrePlaylistField" promptText="Nueva playlist" HBox.hgrow="ALWAYS"/>
+                <Button text="Crear" onAction="#onCrearPlaylist"/>
+            </HBox>
+        </VBox>
+
+        <VBox spacing="10.0" styleClass="card" HBox.hgrow="ALWAYS">
+            <Label text="Catálogo" styleClass="titulo-seccion"/>
+            <ListView fx:id="catalogoListView" prefHeight="220.0" VBox.vgrow="ALWAYS"/>
+            <Button text="Agregar a playlist seleccionada" onAction="#onAgregarAudio" maxWidth="Infinity"/>
+        </VBox>
     </HBox>
 
-    <Label text="Catálogo (selecciona un audio para agregarlo a la playlist seleccionada arriba)"/>
-    <ListView fx:id="catalogoListView" prefHeight="150.0"/>
-    <Button text="Agregar audio a playlist seleccionada" onAction="#onAgregarAudio"/>
-
-    <Button text="Cerrar sesión y salir" onAction="#onSalir"/>
+    <Button text="Cerrar sesión y salir" onAction="#onSalir" styleClass="button-secundario"/>
 </VBox>

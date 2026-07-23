@@ -59,7 +59,7 @@ public class UsuarioRepository {
      */
     public Usuario buscarPorAlias(String alias) {
         for (Usuario usuario : cargarUsuarios()) {
-            if (usuario.getAlias().equals(alias)) {
+            if (usuario.getAlias().equalsIgnoreCase(alias)) {
                 return usuario;
             }
         }

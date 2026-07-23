@@ -9,39 +9,43 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox spacing="15.0" xmlns:fx="http://javafx.com/fxml"
+<VBox spacing="18.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="musicgo.controllers.PreConfiguracionViewController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="24.0" left="24.0" right="24.0" top="24.0"/>
     </padding>
 
-    <Label text="Pre Configuración" style="-fx-font-size: 18px;"/>
+    <Label text="Pre Configuración" styleClass="titulo-app"/>
 
-    <Label text="Registrar usuario"/>
-    <HBox spacing="10.0">
-        <TextField fx:id="aliasField" promptText="Alias"/>
-        <TextField fx:id="nombreField" promptText="Nombre"/>
-        <Button text="Registrar" onAction="#onRegistrarUsuario"/>
-    </HBox>
+    <VBox spacing="10.0" styleClass="card">
+        <Label text="Registrar usuario" styleClass="titulo-seccion"/>
+        <HBox spacing="10.0">
+            <TextField fx:id="aliasField" promptText="Alias" HBox.hgrow="ALWAYS"/>
+            <TextField fx:id="nombreField" promptText="Nombre" HBox.hgrow="ALWAYS"/>
+            <Button text="Registrar" onAction="#onRegistrarUsuario"/>
+        </HBox>
+    </VBox>
 
-    <Label text="Catálogo"/>
-    <ListView fx:id="catalogoListView" prefHeight="150.0"/>
+    <VBox spacing="10.0" styleClass="card" VBox.vgrow="ALWAYS">
+        <Label text="Catálogo" styleClass="titulo-seccion"/>
+        <ListView fx:id="catalogoListView" prefHeight="160.0" VBox.vgrow="ALWAYS"/>
 
-    <Label text="Agregar audio (bono)"/>
-    <HBox spacing="10.0">
-        <ComboBox fx:id="tipoComboBox" promptText="Tipo"/>
-        <TextField fx:id="tituloField" promptText="Título"/>
-        <TextField fx:id="clasificacionField" promptText="Clasificación"/>
-        <TextField fx:id="duracionField" promptText="Duración (segundos)"/>
-    </HBox>
-    <HBox spacing="10.0">
-        <TextField fx:id="campo3Field" promptText="Artista / Anfitrión"/>
-        <TextField fx:id="campo4Field" promptText="Álbum / Descripción"/>
-        <Button text="Agregar audio" onAction="#onAgregarAudio"/>
-    </HBox>
+        <Label text="Agregar audio (bono)" styleClass="titulo-seccion"/>
+        <HBox spacing="10.0">
+            <ComboBox fx:id="tipoComboBox" promptText="Tipo"/>
+            <TextField fx:id="tituloField" promptText="Título" HBox.hgrow="ALWAYS"/>
+            <TextField fx:id="clasificacionField" promptText="Clasificación" HBox.hgrow="ALWAYS"/>
+            <TextField fx:id="duracionField" promptText="Duración (seg)"/>
+        </HBox>
+        <HBox spacing="10.0">
+            <TextField fx:id="campo3Field" promptText="Artista / Anfitrión" HBox.hgrow="ALWAYS"/>
+            <TextField fx:id="campo4Field" promptText="Álbum / Descripción" HBox.hgrow="ALWAYS"/>
+            <Button text="Agregar audio" onAction="#onAgregarAudio"/>
+        </HBox>
+    </VBox>
 
-    <HBox spacing="10.0">
+    <HBox spacing="10.0" alignment="CENTER_RIGHT">
+        <Button text="Salir" onAction="#onSalir" styleClass="button-secundario"/>
         <Button fx:id="continuarButton" text="Continuar" onAction="#onContinuar" disable="true"/>
-        <Button text="Salir" onAction="#onSalir"/>
     </HBox>
 </VBox>

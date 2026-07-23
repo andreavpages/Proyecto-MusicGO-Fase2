@@ -21,8 +21,10 @@ public class NavegacionFXML {
 
     public static void cambiarEscena(ActionEvent event, String rutaFxml) throws IOException {
         Parent root = FXMLLoader.load(NavegacionFXML.class.getResource(rutaFxml));
+        Scene escena = new Scene(root);
+        escena.getStylesheets().add(NavegacionFXML.class.getResource("/styles/musicgo.css").toExternalForm());
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
+        stage.setScene(escena);
         stage.show();
     }
 }
