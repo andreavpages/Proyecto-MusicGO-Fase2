@@ -14,11 +14,13 @@ public abstract class Audio {
     protected String id;
     protected String titulo;
     protected String clasificacionContenido; // Ej: "Explícito", "Apto para todo público"
+    protected int duracionSegundos;
 
-    public Audio(String id, String titulo, String clasificacionContenido) {
+    public Audio(String id, String titulo, String clasificacionContenido, int duracionSegundos) {
         this.id = id;
         this.titulo = titulo;
         this.clasificacionContenido = clasificacionContenido;
+        this.duracionSegundos = duracionSegundos;
     }
 
     public String getId() {
@@ -43,6 +45,21 @@ public abstract class Audio {
 
     public void setClasificacionContenido(String clasificacionContenido) {
         this.clasificacionContenido = clasificacionContenido;
+    }
+
+    public int getDuracionSegundos() {
+        return duracionSegundos;
+    }
+
+    public void setDuracionSegundos(int duracionSegundos) {
+        this.duracionSegundos = duracionSegundos;
+    }
+
+    /**
+     * Formatea la duración como mm:ss para mostrarla en la interfaz.
+     */
+    public String getDuracionFormateada() {
+        return String.format("%d:%02d", duracionSegundos / 60, duracionSegundos % 60);
     }
 
     /**

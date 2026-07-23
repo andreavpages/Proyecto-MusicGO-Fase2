@@ -9,9 +9,9 @@ public class Podcast extends Audio {
     private String anfitrion;
     private String descripcion;
 
-    public Podcast(String id, String titulo, String clasificacionContenido,
+    public Podcast(String id, String titulo, String clasificacionContenido, int duracionSegundos,
                    String anfitrion, String descripcion) {
-        super(id, titulo, clasificacionContenido);
+        super(id, titulo, clasificacionContenido, duracionSegundos);
         this.anfitrion = anfitrion;
         this.descripcion = descripcion;
     }
@@ -35,6 +35,7 @@ public class Podcast extends Audio {
     @Override
     public String mostrarInfo() {
         return "Podcast: " + titulo + " | Anfitrión: " + anfitrion +
-                " | Descripción: " + descripcion + " | Clasificación: " + clasificacionContenido;
+                " | Descripción: " + descripcion + " | Duración: " + getDuracionFormateada() +
+                " | Clasificación: " + clasificacionContenido;
     }
 }

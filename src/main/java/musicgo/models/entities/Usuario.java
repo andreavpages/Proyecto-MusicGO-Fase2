@@ -2,23 +2,15 @@ package musicgo.models.entities;
 
 /**
  * Representa a un usuario final de la plataforma MusicGO.
- * Contiene su información de cuenta, saldo virtual y restricciones de edad/contenido.
  */
 public class Usuario {
 
     private String alias;
-    private String correo;
-    private String password;
-    private double saldoVirtual;
-    private boolean restriccionEdad;
+    private String nombre;
 
-    public Usuario(String alias, String correo, String password,
-                   double saldoVirtual, boolean restriccionEdad) {
+    public Usuario(String alias, String nombre) {
         this.alias = alias;
-        this.correo = correo;
-        this.password = password;
-        this.saldoVirtual = saldoVirtual;
-        this.restriccionEdad = restriccionEdad;
+        this.nombre = nombre;
     }
 
     public String getAlias() {
@@ -29,44 +21,11 @@ public class Usuario {
         this.alias = alias;
     }
 
-    public String getCorreo() {
-        return correo;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public double getSaldoVirtual() {
-        return saldoVirtual;
-    }
-
-    public void setSaldoVirtual(double saldoVirtual) {
-        this.saldoVirtual = saldoVirtual;
-    }
-
-    public boolean isRestriccionEdad() {
-        return restriccionEdad;
-    }
-
-    public void setRestriccionEdad(boolean restriccionEdad) {
-        this.restriccionEdad = restriccionEdad;
-    }
-
-    /**
-     * Verifica si el usuario tiene saldo suficiente para cubrir un monto dado.
-     * Esta es lógica propia de la entidad Usuario (le pertenece a sus propios datos),
-     * por eso vive aquí y no en el controlador.
-     */
-    public boolean verificarSaldo(double monto) {
-        return this.saldoVirtual >= monto;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 }

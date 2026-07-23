@@ -10,9 +10,9 @@ public class Cancion extends Audio {
     private String artista;
     private String album;
 
-    public Cancion(String id, String titulo, String clasificacionContenido,
+    public Cancion(String id, String titulo, String clasificacionContenido, int duracionSegundos,
                    String artista, String album) {
-        super(id, titulo, clasificacionContenido);
+        super(id, titulo, clasificacionContenido, duracionSegundos);
         this.artista = artista;
         this.album = album;
     }
@@ -36,6 +36,7 @@ public class Cancion extends Audio {
     @Override
     public String mostrarInfo() {
         return "Canción: " + titulo + " | Artista: " + artista +
-                " | Álbum: " + album + " | Clasificación: " + clasificacionContenido;
+                " | Álbum: " + album + " | Duración: " + getDuracionFormateada() +
+                " | Clasificación: " + clasificacionContenido;
     }
 }

@@ -1,0 +1,17 @@
+[
+  {
+    "nombre": "Favoritas",
+    "aliasPropietario": "valep",
+    "idsAudios": [
+      "a1111111-1111-1111-1111-111111111111",
+      "a3333333-3333-3333-3333-333333333333"
+    ]
+  },
+  {
+    "nombre": "Para estudiar",
+    "aliasPropietario": "andreav",
+    "idsAudios": [
+      "b1111111-1111-1111-1111-111111111111"
+    ]
+  }
+]

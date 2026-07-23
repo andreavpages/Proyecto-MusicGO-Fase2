@@ -2,7 +2,6 @@ package musicgo.controllers;
 
 import musicgo.models.entities.Audio;
 import musicgo.models.entities.Catalogo;
-import musicgo.models.entities.ProductoEspecial;
 import musicgo.models.persistence.CatalogoRepository;
 
 /**
@@ -46,25 +45,17 @@ public class ControladorCatalogo {
         return eliminado;
     }
 
-    // ---------- PRODUCTOS ESPECIALES ----------
-
-    public void agregarProductoEspecial(ProductoEspecial producto) {
-        catalogo.agregarProducto(producto);
-        catalogoRepository.guardarCatalogo(catalogo);
-    }
-
-    public boolean eliminarProductoEspecial(String nombre) {
-        boolean eliminado = catalogo.getListaProductos()
-                .removeIf(p -> p.getNombre().equals(nombre));
-        if (eliminado) {
-            catalogoRepository.guardarCatalogo(catalogo);
-        }
-        return eliminado;
-    }
-
     // ---------- ACCESO GENERAL ----------
 
     public Catalogo getCatalogo() {
         return catalogo;
+    }
+
+    /**
+     * Regla de validación crítica de la Fase 2 (preconfiguración):
+     * el botón Continuar solo se habilita si hay al menos un audio cargado.
+     */
+    public boolean tieneAlMenosUnAudio() {
+        return !catalogo.getListaAudios().isEmpty();
     }
 }

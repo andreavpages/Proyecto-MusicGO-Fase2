@@ -52,4 +52,21 @@ public class UsuarioRepository {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Busca un usuario por alias entre los ya persistidos.
+     * Retorna null si no existe (quien llama decide si eso es un error).
+     */
+    public Usuario buscarPorAlias(String alias) {
+        for (Usuario usuario : cargarUsuarios()) {
+            if (usuario.getAlias().equals(alias)) {
+                return usuario;
+            }
+        }
+        return null;
+    }
+
+    public boolean existeAlias(String alias) {
+        return buscarPorAlias(alias) != null;
+    }
 }
